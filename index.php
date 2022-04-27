@@ -1,34 +1,53 @@
 <?php
 
-//Геттаеры, сеттеры и свойства для чтения
+//Имя - для чтения курс- можно менять
+class Student {
+    private $name;
+    private $course;
+    
+    public function __construct($name){
+        $this->name = $name;
+        $this->course = 1;
+    }
+    
+    public function getName(){
+        return $this->name;
+    }
+    
+    public function getCourse(){
+        return $this->course;
+    }
+    
+    // Перевод студента на новый курс:
+    public function transferToNextCourse()
+    {
+        $this->course++;
+    }
+}
 
+
+/*
+
+//Имя - для чтения, возраст, и для чтения и для записи
 class User
 {
     private $name;
     private $age;
-    
-    // Конструктор объекта:
-    public function __construct($name, $age)
-    {
+  
+    public function __construct($name, $age){
         $this->name = $name;
         $this->age = $age;
     }
     
-    // Геттер для имени:
-    public function getName()
-    {
+    public function getName(){
         return $this->name;
     }
     
-    // Геттер для возраста:
-    public function getAge()
-    {
+    public function getAge(){
         return $this->age;
     }
     
-    // Сеттер для возраста:
-    public function setAge($age)
-    {
+    public function setAge($age){
         $this->age = $age;
     }
 }
@@ -37,10 +56,10 @@ $user = new User('John', 25); // создаем объект с начальны
 
 echo $user->getName().'<br />'; 
 
-// Возраст можно и читать, и менять:
 echo $user->getAge().'<br />'; 
 echo $user->setAge(30).'<br />'; 
 echo $user->getAge().'<br />'; 
+*/
 
 //Статические методы
 /*
