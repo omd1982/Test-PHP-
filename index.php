@@ -19,12 +19,16 @@ class Student {
     }
     
     // Перевод студента на новый курс:
-    public function transferToNextCourse()
-    {
+    public function transferToNextCourse(){
         $this->course++;
     }
 }
 
+$student = new Student('john'); 
+	
+echo $student->getCourse().'<br />'; 
+$student->transferToNextCourse(); 
+echo $student->getCourse().'<br />'; 
 
 /*
 
